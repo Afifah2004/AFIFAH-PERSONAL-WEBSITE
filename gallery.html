@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - My Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to bottom, #b0bec5, #90a4ae);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            animation: fadeInHeader 1s ease-in-out;
+        }
+        header h1 {
+            font-size: 3em;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+            color: #263238;
+            margin: 0;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            animation: slideInTop 1s ease-in-out;
+        }
+        nav a {
+            color: #263238;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #78909c;
+            color: white;
+        }
+        main {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            max-width: 1200px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            animation: fadeInMain 1s ease-in-out;
+        }
+        h2 {
+            color: #263238;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 600;
+            animation: fadeInText 1s ease-in-out;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Start hidden */
+            animation: fadeInGalleryItem 1s ease-in-out forwards;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease-in-out;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-item .caption {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #b0bec5;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            animation: fadeInFooter 1s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeInHeader {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideInTop {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInMain {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInText {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInGalleryItem {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInFooter {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay hidden>
+        <source src="soundbg.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <header>
+        <h1>Gallery</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="friend.html">Friends</a>
+        <a href="fav_food_place.html">Fav Food & Place</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+    <main>
+        <h2>My Favorite Moments</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="gall1.jpg" alt="Image 1">
+                <div class="caption">Brown Girl</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall2.jpg" alt="Image 2">
+                <div class="caption">Video Game</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall3.jpg" alt="Image 3">
+                <div class="caption">Milk Grilled Chicken</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall4.jpg" alt="Image 4">
+                <div class="caption">First Day Intern</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall5.jpg" alt="Image 5">
+                <div class="caption">Chocojar Princess</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall6.jpg" alt="Image 6">
+                <div class="caption">Cutie Cousins</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall7.jpg" alt="Image 7">
+                <div class="caption">Hang Out with School Friend</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall8.jpg" alt="Image 8">
+                <div class="caption">Penang</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall9.jpg" alt="Image 9">
+                <div class="caption">Younger Bro Taekwondo</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall10.jpg" alt="Image 10">
+                <div class="caption">Cameron Highlands</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall11.jpg" alt="Image 11">
+                <div class="caption">Vollunter at Zoo</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall12.jpg" alt="Image 12">
+                <div class="caption">Snorkeling</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall14.jpg" alt="Image 13">
+                <div class="caption">Last Day High School</div>
+            </div>
+            <div class="gallery-item">
+                <img src="gall15.jpg" alt="Image 14">
+                <div class="caption">My Birthday</div>
+            </div>
+            <div class="gallery-item">
+                <img src="afifah.jpg" alt="Image 14">
+                <div class="caption">DoubleTree Hilton</div>
+            </div>
+            <div class="gallery-item">
+                <img src="fav5.jpg" alt="Image 14">
+                <div class="caption">Bit n Sip Cafe</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Afifah Imanina. All rights reserved.</p>
+    </footer>
+</body>
+</html>

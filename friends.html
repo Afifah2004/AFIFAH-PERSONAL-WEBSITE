@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friends - My Personal Website</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff8e1;
+            color: #6d6a1e;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to bottom, #fff59d, #fdd835);
+            color: #3e3e1f;
+            padding: 30px 20px;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            color: #f57f17;
+            margin: 0;
+        }
+        #clock {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #f57f17;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+            background-color: #fffde7;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #6d6a1e;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #fdd835;
+            color: white;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+        h2 {
+            color: #f57f17;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        .section-title {
+            color: #ffb300;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .friend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fffde7;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease-out;
+        }
+        .friend-item img {
+            width: 120px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .friend-item h3 {
+            color: #f57f17;
+            margin-bottom: 10px;
+        }
+        .friend-item p {
+            color: #6d6a1e;
+        }
+        footer {
+            background-color: #fff59d;
+            color: #3e3e1f;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('clock').innerText = `Time Now: ${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateClock, 1000);
+    </script>
+</head>
+<body onload="updateClock()">
+    <audio autoplay hidden>
+        <source src="soundbg2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <header>
+        <h1>Friends</h1>
+        <p id="clock"></p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="experience.html">Experience</a>
+        <a href="education.html">Education</a>
+        <a href="family.html">Family</a>
+        <a href="friends.html">Friends</a>
+        <a href="fav_food_place.html">Fav Food & Place</a>
+        <a href="contact.html">Contact</a>
+        <a href="gallery.html">Gallery</a>
+    </nav>
+    <main>
+        <h2>Meet My Friends</h2>
+        <p>Click on the image to enlarge it.</p>
+        <div class="friend-item">
+            <a target="_blank" href="friend1.jpg">
+                <img src="friend1.jpg" style="width:150px">
+            </a>
+            <div>
+                <h3>School Friend</h3>
+                <p><strong>Name:</strong> Aisha, Hadifah, Aainaa, and Durratun</p>
+                <p><strong>Age:</strong> 20</p>
+                <p><strong>Description:</strong> We have been companions since childhood. We enjoy going out for food hunting and watching movies together.</p>
+            </div>
+        </div>
+        <div class="friend-item">
+            <a target="_blank" href="friend4.jpg">
+                <img src="friend4.jpg" style="width:150px">
+            </a>
+            <div>
+                <h3>UITM Friend</h3>
+                <p><strong>Name:</strong> Nisa', Wafaa', and Syafiqah</p>
+                <p><strong>Age:</strong> 20</p>
+                <p><strong>Description:</strong> We are always there for each other, whether for study sessions or fun. We love exploring new places together.</p>
+            </div>
+        </div>
+        <div class="friend-item">
+            <a target="_blank" href="friend3.jpg">
+                <img src="friend3.jpg" style="width:150px">
+            </a>
+            <div>
+                <h3>Roommate</h3>
+                <p><strong>Name:</strong> Auni, Anis, and Fiki</p>
+                <p><strong>Age:</strong> 20</p>
+                <p><strong>Description:</strong> Always full of energy and fun to be around. We share a love for games and K-pop.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Afifah Imanina. All rights reserved.</p>
+    </footer>
+</body>
+</html>
